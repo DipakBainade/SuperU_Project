@@ -1,0 +1,101 @@
+Project working requirements:
+
+
+download zip from: https://github.com/DipakBainade/SuperU_Project.git
+
+
+
+Follow the following steps which are the requirements of the project to run on local machine (laptop/computer):
+
+1. python -m venv venv (create virtual environment)
+2. cd venv
+3. cd scripts
+4. cd .\activate (activate virtual environment)
+5. cd ..
+6. cd ..
+7. pip install django (install django)
+8. python.exe -m pip install --upgrade pip (upgrade pip)
+9. python -m pip install django-allauth (install django-allauth)
+10.python -m pip install djangorestframework (install djangorestframework)
+11.pip install --upgrade djangorestframework-simplejwt (install djangorestframework-simplejwt)
+12.pip install django-cors-headers (install django-cors-headers)
+13.pip install whitenoise (install whitenoise)
+14.python manage.py runserver (run the server)
+
+Done
+
+server will run at port no 80: http://127.0.0.1:80/
+
+we can run project using following URL's:
+1. http://127.0.0.1:80/
+2. apiappdb.com
+
+
+
+::: How to run the code and how application works :::
+
+1. first follow all the above steps and run the code. application will run on port 80 and can be accessible on url -> http://127.0.0.1:80/
+
+2. User can register first and using there registered email id and password he/she can able to access the application.
+
+3. Or user can directly access the application by using already registered user as follows:
+email: john1@example.com
+password: 1234
+
+4. Once logged in user can see the data from static file in JSON format.
+
+5. User has also option of sign in using there google account.
+
+
+::: Admin access :::
+
+1. use url http://127.0.0.1/admin to access the admin page.
+
+2. enter the following details into it
+username: dipak
+password: Dipak@12345
+
+3. after login user can add the users by clicking on button there.
+
+4. These user will be stored in database.
+
+5. Now open the Visual Studio Code extension and download Thunder Client extension in it.
+
+6. In thunder client extension click on new request and select POST Method and type URL: http://127.0.0.1:80/register/
+Select body -> JSON -> and add username and password in JSON format as follows.
+{
+  "username":"admin11",
+  "password":"12345"
+}
+
+7. Now hit the Send button, you will get response with username, password, refresh token and access token.
+
+8. copy the access token (not double quotes)
+
+9. Now again generate new request and select GET method and paste the following url:
+http://127.0.0.1:80/student/
+Select Auth -> Bearer and paste that copied access token from POST method into Bearer Token and save (control + s).
+
+10. Now press the send button you will get all the student data in JSON format.
+This data is nothing but what you have added into the admin login and student section.
+
+Please have a look at attached screenshots of the process.
+
+Thank you!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
